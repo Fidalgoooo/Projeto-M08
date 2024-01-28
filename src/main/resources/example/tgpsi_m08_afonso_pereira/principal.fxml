@@ -24,7 +24,7 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Button fx:id="btnCarro" layoutX="10.0" layoutY="299.0" mnemonicParsing="false" onAction="#btnCarro_On_Action" onMouseEntered="#btnCarroEntered" onMouseExited="#btnCarroExited" prefHeight="40.0" prefWidth="247.0" style="-fx-background-color: transparent; -fx-border-color: #fff; -fx-border-radius: 4px;" text="Carro" textFill="WHITE" AnchorPane.leftAnchor="10.0">
+            <Button fx:id="btnCarro" layoutX="10.0" layoutY="299.0" mnemonicParsing="false" onAction="#btnCarro_On_Action" onMouseEntered="#btnCarroEntered" onMouseExited="#btnCarroExited" prefHeight="40.0" prefWidth="247.0" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-border-radius: 4px;" text="Carro" textFill="WHITE" AnchorPane.leftAnchor="10.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -32,7 +32,7 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="btnCliente" layoutX="10.0" layoutY="346.0" mnemonicParsing="false" onAction="#btnCliente_On_Action" onMouseEntered="#btnClienteEntered" onMouseExited="#btnClienteExited" prefHeight="40.0" prefWidth="248.0" style="-fx-background-color: transparent; -fx-border-color: #fff; -fx-border-radius: 4px;" text="Cliente" textFill="WHITE">
+            <Button fx:id="btnCliente" layoutX="10.0" layoutY="346.0" mnemonicParsing="false" onAction="#btnCliente_On_Action" onMouseEntered="#btnClienteEntered" onMouseExited="#btnClienteExited" prefHeight="40.0" prefWidth="248.0" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-border-radius: 4px;" text="Cliente" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -40,7 +40,7 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="btnFuncionario" layoutX="10.0" layoutY="393.0" mnemonicParsing="false" onAction="#Funcionario_On_Action" onMouseEntered="#btnFuncionarioEntered" onMouseExited="#btnFuncionarioExited" prefHeight="40.0" prefWidth="248.0" style="-fx-background-color: transparent; -fx-border-color: fff; -fx-border-radius: 4px;" text="Funcionário" textFill="WHITE" AnchorPane.leftAnchor="10.0">
+            <Button fx:id="btnFuncionario" layoutX="10.0" layoutY="393.0" mnemonicParsing="false" onAction="#Funcionario_On_Action" onMouseEntered="#btnFuncionarioEntered" onMouseExited="#btnFuncionarioExited" prefHeight="40.0" prefWidth="248.0" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-border-radius: 4px;" text="Funcionário" textFill="WHITE" AnchorPane.leftAnchor="10.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -48,7 +48,7 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="btnSobreMim" layoutX="10.0" layoutY="440.0" mnemonicParsing="false" onAction="#SobreMim_On_Action" onMouseEntered="#btnAcercaDeEntered" onMouseExited="#btnAcercaDeExited" prefHeight="40.0" prefWidth="249.0" style="-fx-background-color: transparent; -fx-border-color: #fff; -fx-border-radius: 4px;" text="Sobre mim" textFill="WHITE" AnchorPane.leftAnchor="10.0">
+            <Button fx:id="btnSobreMim" layoutX="10.0" layoutY="440.0" mnemonicParsing="false" onAction="#SobreMim_On_Action" onMouseEntered="#btnAcercaDeEntered" onMouseExited="#btnAcercaDeExited" prefHeight="40.0" prefWidth="249.0" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-border-radius: 4px;" text="Sobre mim" textFill="WHITE" AnchorPane.leftAnchor="10.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
