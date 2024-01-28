@@ -21,13 +21,6 @@ public class LoginController {
         // Verifica se o nome e a palavra-passe correspondem
         if(txtUsername.getText().equals("Afonso") && txtPassword.getText().equals("admin")){
 
-            //Mostra uma mensagem de login bem-sucedido
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Login");
-            alert.setHeaderText("Realizado com sucesso!");
-            alert.setContentText("Clique no botão para a proxima janela...");
-            alert.show();
-
             // Carrega a próxima janela (Principal.fxml)
             Parent scene = FXMLLoader.load(getClass().getResource("Principal.fxml"));
             //primaryStage.initStyle(StageStyle.UNDECORATED);

@@ -10,6 +10,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -294,58 +295,66 @@ public class PrincipalController implements Initializable {
 
     public void TabelaFuncionar() {
         TableViewFuncionario.setItems(Settings.getListaFuncionaro());
-        Tabela_Id_Funcionario.setCellValueFactory(new PropertyValueFactory<Funcionario, Integer>("ID"));
+        Tabela_Id_Funcionario.setCellValueFactory(new PropertyValueFactory<Funcionario, Integer>("IdFuncionario"));
         Tabela_Nome_Funcionario.setCellValueFactory(new PropertyValueFactory<Funcionario, String>("Nome"));
         Tabela_Email_Funcionario.setCellValueFactory(new PropertyValueFactory<Funcionario, String>("Email"));
         Tabela_Cargo_Funcionario.setCellValueFactory(new PropertyValueFactory<Funcionario, String>("Cargo"));
-        Tabela_Salario_Funcionario.setCellValueFactory(new PropertyValueFactory<Funcionario, String>("Salário"));
+        Tabela_Salario_Funcionario.setCellValueFactory(new PropertyValueFactory<Funcionario, String>("Salario"));
     }
 
     public void TabelaCarro() {
         TableViewCarro.setItems(Settings.getListacarro());
+        Tabela_Id.setCellValueFactory(new PropertyValueFactory<Carro, Integer>("IdCarro"));
         Tabela_Marca.setCellValueFactory(new PropertyValueFactory<Carro, String>("Marca"));
         Tabela_Modelo.setCellValueFactory(new PropertyValueFactory<Carro, String>("Modelo"));
         Tabela_Ano.setCellValueFactory(new PropertyValueFactory<Carro, Integer>("Ano"));
-        Tabela_InicioAluguer.setCellValueFactory(new PropertyValueFactory<Carro, String>("Inicio"));
-        Tabela_FimAluguer.setCellValueFactory(new PropertyValueFactory<Carro, String>("Fim"));
+        Tabela_InicioAluguer.setCellValueFactory(new PropertyValueFactory<Carro, String>("DataInicio"));
+        Tabela_FimAluguer.setCellValueFactory(new PropertyValueFactory<Carro, String>("DataFim"));
     }
 
     public void TabelaCliente() {
         TableViewCliente.setItems(Settings.getListaCliente());
-        Tabela_Id_Cliente.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("ID"));
+        Tabela_Id_Cliente.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("Id"));
         Tabela_Nome_Cliente.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Nome"));
         Tabela_Email_Cliente.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Email"));
         Tabela_Telefone_Cliente.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Telefone"));
-        Tabela_Endereco_Cliente.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Endereço"));
+        Tabela_Endereco_Cliente.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Endereco"));
     }
 
 
     public void ClienteVerInfo() {
         Cliente clienteData = (Cliente) TableViewCliente.getSelectionModel().getSelectedItem();
-        txt_Id_Cliente.setText(String.valueOf(clienteData.getId()));
-        txt_Nome_Cliente.setText(clienteData.getNome());
-        txt_Email_Cliente.setText(clienteData.getEmail());
-        txt_Telefone_Cliente.setText(String.valueOf(clienteData.getTelefone()));
-        txt_Endereco_Cliente.setText(clienteData.getEndereco());
+        if(Objects.nonNull(clienteData)) {
+            txt_Id_Cliente.setText(String.valueOf(clienteData.getId()));
+            txt_Nome_Cliente.setText(clienteData.getNome());
+            txt_Email_Cliente.setText(clienteData.getEmail());
+            txt_Telefone_Cliente.setText(String.valueOf(clienteData.getTelefone()));
+            txt_Endereco_Cliente.setText(clienteData.getEndereco());
+        }
     }
 
     public void CarroVerInfo() {
         Carro carroData = (Carro) TableViewCarro.getSelectionModel().getSelectedItem();
-        txt_IdCarro_Carro.setText(String.valueOf(carroData.getIdCarro()));
-        txt_Marca_Carro.setText(carroData.getMarca());
-        txt_Modelo_Carro.setText(carroData.getModelo());
-        txt_Ano_Carro.setText(String.valueOf(carroData.getAno()));
-        txt_InicioAluguer_Carro.setText(carroData.getDataInicio());
-        txt_FimAluguer_Carro.setText(carroData.getDataFim());
+        if(Objects.nonNull(carroData)) {
+
+            txt_IdCarro_Carro.setText(String.valueOf(carroData.getIdCarro()));
+            txt_Marca_Carro.setText(carroData.getMarca());
+            txt_Modelo_Carro.setText(carroData.getModelo());
+            txt_Ano_Carro.setText(String.valueOf(carroData.getAno()));
+            txt_InicioAluguer_Carro.setText(carroData.getDataInicio());
+            txt_FimAluguer_Carro.setText(carroData.getDataFim());
+        }
     }
 
     public void FuncionarVerInfo() {
         Funcionario funcionarioData = (Funcionario) TableViewFuncionario.getSelectionModel().getSelectedItem();
-        txt_Idfuncionario_Funcionario.setText(String.valueOf(funcionarioData.getIdFuncionario()));
-        txt_Nome_Funcionario.setText(String.valueOf(funcionarioData.getNome()));
-        txt_Email_Funcionario.setText(funcionarioData.getEmail());
-        txt_Cargo_Funcionario.setText(funcionarioData.getCargo());
-        txt_Salario_Funcionario.setText(String.valueOf(funcionarioData.getSalario()));
+        if(Objects.nonNull(funcionarioData)) {
+            txt_Idfuncionario_Funcionario.setText(String.valueOf(funcionarioData.getIdFuncionario()));
+            txt_Nome_Funcionario.setText(String.valueOf(funcionarioData.getNome()));
+            txt_Email_Funcionario.setText(funcionarioData.getEmail());
+            txt_Cargo_Funcionario.setText(funcionarioData.getCargo());
+            txt_Salario_Funcionario.setText(String.valueOf(funcionarioData.getSalario()));
+        }
     }
 
 
@@ -782,7 +791,7 @@ public class PrincipalController implements Initializable {
         } else {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Eliminar");
-            alert.setHeaderText("Deseja mesmo Eliminar?"+"\n"+"ID: " + txt_Id_Cliente.getText() + "\n" + "Nome: " + txt_Nome_Cliente.getText() + "\n" + "Email: " + txt_Email_Cliente.getText() + "\n" + "Telefone: " + txt_Telefone_Cliente + "\n" + "Endereço: " + txt_Endereco_Cliente.getText());
+            alert.setHeaderText("Deseja mesmo Eliminar?"+"\n"+"ID: " + txt_Id_Cliente.getText() + "\n" + "Nome: " + txt_Nome_Cliente.getText() + "\n" + "Email: " + txt_Email_Cliente.getText() + "\n" + "Telefone: " + txt_Telefone_Cliente.getText() + "\n" + "Endereço: " + txt_Endereco_Cliente.getText());
             ButtonType botaoSim = new ButtonType("Sim");
             ButtonType botaoNao = new ButtonType("Não");
             alert.getButtonTypes().setAll(botaoSim, botaoNao);
@@ -826,7 +835,7 @@ public class PrincipalController implements Initializable {
         else{
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Eliminar");
-            alert.setHeaderText("Deseja mesmo Eliminar?"+"\n" + "ID: " +txt_Idfuncionario_Funcionario.getText() + "\n" + "Nome: " + txt_Nome_Funcionario.getText() + "\n" + "Email: " + txt_Email_Funcionario.getText() + "\n" + "Cargo: " + txt_Cargo_Funcionario + "Salário: " + txt_Salario_Funcionario);
+            alert.setHeaderText("Deseja mesmo Eliminar?"+"\n" + "ID: " +txt_Idfuncionario_Funcionario.getText() + "\n" + "Nome: " + txt_Nome_Funcionario.getText() + "\n" + "Email: " + txt_Email_Funcionario.getText() + "\n" + "Cargo: " + txt_Cargo_Funcionario.getText() + "Salário: " + txt_Salario_Funcionario.getText());
             ButtonType botaoSim = new ButtonType("Sim");
             ButtonType botaoNao = new ButtonType("Não");
             alert.getButtonTypes().setAll(botaoSim, botaoNao);

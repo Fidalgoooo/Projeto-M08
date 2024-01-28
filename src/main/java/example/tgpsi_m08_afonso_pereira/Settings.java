@@ -67,28 +67,28 @@ public class Settings {
     }
 
     public static void ListaCiente() {
-        listaCliente.add(new Cliente(1,"João Silva", "joao@email.com", "123456789", "Rua Principal, 123"));
-        listaCliente.add(new Cliente(2,"Maria Oliveira", "maria@email.com", "987654321", "Avenida Secundária, 456"));
-        listaCliente.add(new Cliente(3,"Pedro Santos", "pedro@email.com", "111222333", "Travessa Estreita, 789"));
-        listaCliente.add(new Cliente(4,"Ana Pereira", "ana@email.com", "444555666", "Praça Central, 012"));
-        listaCliente.add(new Cliente(5,"Carlos Souza", "carlos@email.com", "777888999", "Alameda Larga, 345"));
-        listaCliente.add(new Cliente(6,"Laura Costa", "laura@email.com", "333222111", "Estrada Velha, 678"));
-        listaCliente.add(new Cliente(7,"Rafael Lima", "rafael@email.com", "555444333", "Avenida Nova, 901"));
-        listaCliente.add(new Cliente(8,"Juliana Rodrigues", "juliana@email.com", "999888777", "Rua do Comércio, 234"));
-        listaCliente.add(new Cliente(9,"Fernando Almeida", "fernando@email.com", "666777888", "Travessa dos Artistas, 567"));
-        listaCliente.add(new Cliente(10,"Mariana Vieira", "mariana@email.com", "222111000", "Praça dos Esportes, 890"));
+        listaCliente.add(new Cliente(1,"João Silva", "joao@icloud.com", "123456789", "Rua Principal, 123"));
+        listaCliente.add(new Cliente(2,"Maria Oliveira", "maria@icloud.com", "987654321", "Avenida Secundária, 456"));
+        listaCliente.add(new Cliente(3,"Pedro Santos", "pedro@icloud.com", "111222333", "Travessa Estreita, 789"));
+        listaCliente.add(new Cliente(4,"Ana Pereira", "ana@icloud.com", "444555666", "Praça Central, 012"));
+        listaCliente.add(new Cliente(5,"Carlos Souza", "carlos@icloud.com", "777888999", "Alameda Larga, 345"));
+        listaCliente.add(new Cliente(6,"Laura Costa", "laura@icloud.com", "333222111", "Estrada Velha, 678"));
+        listaCliente.add(new Cliente(7,"Rafael Lima", "rafael@icloud.com", "555444333", "Avenida Nova, 901"));
+        listaCliente.add(new Cliente(8,"Juliana Rodrigues", "juliana@icloud.com", "999888777", "Rua do Comércio, 234"));
+        listaCliente.add(new Cliente(9,"Fernando Almeida", "fernando@icloud.com", "666777888", "Travessa dos Artistas, 567"));
+        listaCliente.add(new Cliente(10,"Mariana Vieira", "mariana@icloud.com", "222111000", "Praça dos Esportes, 890"));
     }
 
     public static void ListaFuncionario(){
-        listaFuncionario.add(new Funcionario(1,"Florin Chascear", "florin@email.com", "Dono", 5000));
-        listaFuncionario.add(new Funcionario(2,"António Farbitnyk", "antonio@email.com", "Supervisor", 4000));
-        listaFuncionario.add(new Funcionario(3,"Andre Ventura", "andre@email.com", "Chefe de loja", 3000));
-        listaFuncionario.add(new Funcionario(4,"Ricardo Santos", "ricardo@email.com", "Porteiro", 3000));
-        listaFuncionario.add(new Funcionario(5,"Alexandre Costa", "alexandre@email.com", "Segurança", 3500));
-        listaFuncionario.add(new Funcionario(6,"Laura Almeida", "laura@email.com", "Sub-Chefe", 2500));
-        listaFuncionario.add(new Funcionario(7,"Gabriel Lima", "gabriel@email.com", "Mecanico", 2800));
-        listaFuncionario.add(new Funcionario(8,"João Sousa", "joao@email.com", "Secretário", 2700));
-        listaFuncionario.add(new Funcionario(9,"Tiago Silva", "tiago@email.com", "Assistente", 2600));
-        listaFuncionario.add(new Funcionario(10,"Otacilio Alves", "otacilio@email.com", "Limpeza", 0));
+        listaFuncionario.add(new Funcionario(1,"João Marques", "joao@icloud.com", "Dono", 5000));
+        listaFuncionario.add(new Funcionario(2,"António Farbitnyk", "antonio@icloud.com", "Supervisor", 4000));
+        listaFuncionario.add(new Funcionario(3,"Andre Ventura", "andre@icloud.com", "Chefe de loja", 3000));
+        listaFuncionario.add(new Funcionario(4,"Ricardo Santos", "ricardo@icloud.com", "Porteiro", 3000));
+        listaFuncionario.add(new Funcionario(5,"Alexandre Costa", "alexandre@icloud.com", "Segurança", 3500));
+        listaFuncionario.add(new Funcionario(6,"Laura Almeida", "laura@icloud.com", "Sub-Chefe", 2500));
+        listaFuncionario.add(new Funcionario(7,"Gabriel Lima", "gabriel@icloud.com", "Mecanico", 2800));
+        listaFuncionario.add(new Funcionario(8,"João Sousa", "joao@icloud.com", "Secretário", 2700));
+        listaFuncionario.add(new Funcionario(9,"Tiago Silva", "tiago@icloud.com", "Assistente", 2600));
+        listaFuncionario.add(new Funcionario(10,"Otacilio Alves", "otacilio@icloud.com", "Limpeza", 100));
     }
 }
